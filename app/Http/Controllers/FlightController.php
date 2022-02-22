@@ -9,7 +9,7 @@ class FlightController extends Controller
     public function index()
     {
         $queryString = http_build_query([
-          'api_key' => '37ff9d30-67d1-4ce1-b699-b12a3a542796',
+          'api_key' => config('services.key.api'),
           'arr_iata' => 'KBP'
         ]);
 
