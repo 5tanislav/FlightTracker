@@ -52,17 +52,17 @@ class FlightData extends Command
             $apiResults = json_decode($json, true);
             // dd($apiResults['response']);
 
-            foreach ($apiResults['response'] as $result) {
-                $flightData = new Flight();
-                $flightData->flag = $result['flag'];
-                $flightData->departure_iata = $result['dep_iata'];
-                $flightData->arrival_iata = $result['arr_iata'];
-                $flightData->airlane_iata = $result['airline_iata'];
-                $flightData->latitude = $result['lat'];
-                $flightData->longtitude = $result['lng'];
-                $flightData->altitude = $result['alt'];
-                $flightData->speed = $result['speed'];
-                $flightData->save();
-            }
+        foreach ($apiResults['response'] as $result) {
+            $flightData = new Flight();
+            $flightData->flag = $result['flag'];
+            $flightData->departure_iata = $result['dep_iata'];
+            $flightData->arrival_iata = $result['arr_iata'];
+            $flightData->airlane_iata = $result['airline_iata'];
+            $flightData->latitude = $result['lat'];
+            $flightData->longtitude = $result['lng'];
+            $flightData->altitude = $result['alt'];
+            $flightData->speed = $result['speed'];
+            $flightData->save();
+        }
     }
 }

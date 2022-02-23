@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 class FlightController extends Controller
 {
     public function index()
-        {
-        }
+    {
+        //
+    }
 }
