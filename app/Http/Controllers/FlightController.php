@@ -10,7 +10,7 @@ class FlightController extends Controller
     {
         $queryString = http_build_query([
           'api_key' => config('services.key.api'),
-          'arr_iata' => 'KBP'
+        //   'arr_iata' => 'KBP'
         ]);
 
         $ch = curl_init(sprintf('%s?%s', 'https://airlabs.co/api/v9/flights', $queryString));
